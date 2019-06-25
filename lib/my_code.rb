@@ -1,5 +1,5 @@
 # My Code here....
-
+require "pry"
 
 def map_to_negativize(source_array)
   counter = 0
@@ -52,33 +52,33 @@ def reduce_to_total(source_array, starting_point=0)
 end
 
 
+
+
+
+
 def reduce_to_all_true(source_array)
   counter = 0
-  while source_array[counter] do
+
+  while counter < source_array.length do
     puts source_array[counter]
-    my_bool = !!source_array[counter]
-    puts my_bool
-    if !!source_array[counter] == false || !!source_array[counter] == nil
+    if !!source_array[counter] == false
       return false
     end
     counter += 1
   end
-  return true
+  true
 end
 
 
 
+
 def reduce_to_any_true(source_array)
-  puts "hello"
   counter = 0
-  while source_array[counter]
-    puts "hello"
-    puts source_array[counter]
-    if source_array[counter] == true
-      puts "true"
+  while counter < source_array.length do
+    if !!source_array[counter] == true
       return true
     end
     counter += 1
   end
-  return false
+  false
 end
